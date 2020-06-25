@@ -46,9 +46,9 @@ class Application(object):
 			font = font2, fg = self.color_lb1, bg = self.color_bg)
 		self.label3 = Label(self.main_frame, text = 'Peso (Kg)',
 			font = font2, fg = self.color_lb1, bg = self.color_bg)
-		self.label4 = Label(self.main_frame, text = 'Altura',
-			font = font1, textvariable = self.__message,
-			fg = self.color_lb1, bg = self.color_bg)
+		self.label4 = Label(self.main_frame, font = font1,
+			textvariable = self.__message, fg = self.color_lb1,
+			bg = self.color_bg)
 
 		#		text box
 		self.c_text1 = Entry(self.main_frame,
