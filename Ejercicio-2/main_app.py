@@ -5,10 +5,10 @@ import requests
 
 class Application(object):
 	__window = None
-	__messagebox = None
-	__weight = None
-	__height = None
-
+	__coin_in = None
+	__coin_out = None
+	__message = None
+	
 	def __init__(self):
 
 		#	colors

@@ -4,9 +4,9 @@ from PIL import Image, ImageTk
 
 class Application(object):
 	__window = None
-	__messagebox = None
 	__weight = None
 	__height = None
+	__message = None
 
 	def __init__(self):
 
