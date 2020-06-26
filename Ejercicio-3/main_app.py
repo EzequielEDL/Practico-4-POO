@@ -150,10 +150,14 @@ class Application(object):
 			coin = float(self.__coin_in.get())
 
 			for i in range(len(list_coins)):
-				if list_coins[i].get('name') != self.listbox1.get(i):
-					self.listbox1.insert(i, list_coins[i].get('name'))
-					self.listbox2.insert(i, list_coins[i].get('buy') * coin)
-					self.listbox3.insert(i, list_coins[i].get('sell') * coin)
+				print(i)
+				self.listbox1.delete(i)
+				self.listbox2.delete(i)
+				self.listbox3.delete(i)
+
+				self.listbox1.insert(i, list_coins[i].get('name'))
+				self.listbox2.insert(i, list_coins[i].get('buy') * coin)
+				self.listbox3.insert(i, list_coins[i].get('sell') * coin)
 
 			date = 'Ultima actualizacion: '
 			date += str(datetime.now().time().replace(microsecond = 0))
