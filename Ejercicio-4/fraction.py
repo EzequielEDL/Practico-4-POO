@@ -1,5 +1,5 @@
 import re
-from math import gcd
+
 
 class Fraction:
 	__num = 0

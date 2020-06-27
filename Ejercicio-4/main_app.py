@@ -3,6 +3,7 @@ from tkinter import ttk, font
 from functools import partial
 from fraction import Fraction
 
+
 class Application(object):
 	__window = None
 	__result =  None
