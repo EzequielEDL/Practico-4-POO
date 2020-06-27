@@ -5,13 +5,6 @@ from datetime import datetime
 import requests
 import re
 
-
-#	7 labels
-#	2 buttons
-#	3 list box
-#	4 separator
-#	1 textbox
-
 class Application(object):
 	__window = None
 	__coin_in =  None
