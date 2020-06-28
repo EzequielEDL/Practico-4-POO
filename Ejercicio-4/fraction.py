@@ -27,7 +27,7 @@ class Fraction:
 		den = self.__den * fraction2.get_num()
 
 		if self.__den == fraction2.get_den():
-			return f'{num / den}'
+			return self.__simply(num, den)
 		else:
 			return self.__simply(num, den)
 
