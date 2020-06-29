@@ -75,20 +75,11 @@ class Listbox(Listbox):
 			fg = self.rs.color_lb1,
 			activestyle = 'none',
 			selectbackground = self.rs.color_bt,
-			width = 20, highlightthickness = 0,
-			height = 15, takefocus = 0,
-			relief = SUNKEN
-			)
-		self.config(**kwargs)
-
-class Scrollbar(Scrollbar):
-	def __init__(self, master, **kwargs):
-		super().__init__(master)
-		self.rs = Resources()
-		self.config(
-			bg = self.rs.color_bg,
-			activebackground = self.rs.color_bt,
-			troughcolor = self.rs.color_bt,
+			selectforeground = self.rs.color_bg2,
+			width = 20,
+			highlightthickness = 0,
+			height = 15,
+			takefocus = 0,
 			relief = SUNKEN
 			)
 		self.config(**kwargs)

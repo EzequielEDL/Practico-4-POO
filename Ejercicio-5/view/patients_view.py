@@ -8,7 +8,7 @@ class PatientsView(tk.Tk):
 	def __init__(self):
 		super().__init__()
 		self.rs = Resources()
-		center_window(self, w = 520, h = 330)
+		center_window(self, w = 600, h = 330)
 		self.config(bg = self.rs.color_bg)
 		self.title('Lista de Pacientes')
 		self.list = PatientList(self)
