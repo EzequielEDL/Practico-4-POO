@@ -1,0 +1,195 @@
+{
+    "__class__": "HandlePatient",
+    "data": [
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Nicolas",
+                "lastname": "Tesla",
+                "phone": "(264)9870811",
+                "height": "108",
+                "weight": "69"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Michael",
+                "lastname": "Darby",
+                "phone": "(264)3632696",
+                "height": "193",
+                "weight": "100"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Leonardo",
+                "lastname": "Darby",
+                "phone": "(264)4814762",
+                "height": "108",
+                "weight": "92"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Marie",
+                "lastname": "Hawking",
+                "phone": "(264)4998343",
+                "height": "140",
+                "weight": "127"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "William",
+                "lastname": "Edison",
+                "phone": "(264)9118649",
+                "height": "134",
+                "weight": "134"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Alfred",
+                "lastname": "Edison",
+                "phone": "(264)4681196",
+                "height": "162",
+                "weight": "60"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Blaise",
+                "lastname": "Galilei",
+                "phone": "(264)4022195",
+                "height": "187",
+                "weight": "113"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Leonardo",
+                "lastname": "Copernico",
+                "phone": "(264)5764636",
+                "height": "110",
+                "weight": "83"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "William",
+                "lastname": "DaVinci",
+                "phone": "(264)5733544",
+                "height": "197",
+                "weight": "123"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Nicolas",
+                "lastname": "Einsten",
+                "phone": "(264)2580509",
+                "height": "148",
+                "weight": "124"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Abraham",
+                "lastname": "Wilkinson",
+                "phone": "(264)6345954",
+                "height": "152",
+                "weight": "123"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "James",
+                "lastname": "Ohm",
+                "phone": "(264)4147470",
+                "height": "199",
+                "weight": "106"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Edward",
+                "lastname": "DaVinci",
+                "phone": "(264)8479291",
+                "height": "166",
+                "weight": "105"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Karl",
+                "lastname": "Tesla",
+                "phone": "(264)9523344",
+                "height": "134",
+                "weight": "53"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Blaise",
+                "lastname": "DaVinci",
+                "phone": "(264)6090647",
+                "height": "199",
+                "weight": "101"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "William",
+                "lastname": "Cullen",
+                "phone": "(264)8524543",
+                "height": "182",
+                "weight": "122"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Nicolas",
+                "lastname": "Pascal",
+                "phone": "(264)2670451",
+                "height": "112",
+                "weight": "130"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Abraham",
+                "lastname": "Wilkinson",
+                "phone": "(264)5526081",
+                "height": "148",
+                "weight": "107"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Michael",
+                "lastname": "Tull",
+                "phone": "(264)4793608",
+                "height": "144",
+                "weight": "122"
+            }
+        }
+    ]
+}
