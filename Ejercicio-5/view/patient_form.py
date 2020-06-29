@@ -1,24 +1,27 @@
 import tkinter as tk
+from view.widgets import *
 from tkinter import messagebox
 from model.patient import Patient
 
 
-class PatientForm(tk.LabelFrame):
+class PatientForm(LabelFrame):
 	fields = ('Apellido', 'Nombre', 'Telefono', 'Altura', 'Peso')
 
 	def __init__(self, master, **kwargs):
-		super().__init__(master, text = 'Paciente', padx = 10, pady = 10,
+		super().__init__(master, text = 'Paciente', padx = 15, pady = 10,
 			**kwargs)
-		self.frame = tk.Frame(self)
+		self.config(text = 'Paciente')
+		self.frame = Frame(self)
 		self.entries = list(map(self.create_field, enumerate(self.fields)))
-		self.frame.pack()
+		self.frame.pack(pady = 10, padx = 15)
 
 	def create_field(self, field):
 		position, text = field
-		label = tk.Label(self.frame, text = text)
-		entry = tk.Entry(self.frame, width = 25)
-		label.grid(row = position, column = 0, pady = 5)
-		entry.grid(row = position, column = 1, pady = 5)
+		label = Label(self.frame, text = text)
+		entry = Entry(self.frame, width = 25)
+		opts = {'padx': 5, 'pady': 5}
+		label.grid(row = position, column = 0, sticky = 'e', **opts)
+		entry.grid(row = position, column = 1, **opts)
 		return entry
 
 	def show_patient(self, patient):

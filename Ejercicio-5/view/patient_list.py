@@ -1,12 +1,13 @@
 import tkinter as tk
 from tkinter import messagebox
+from view.widgets import *
 
 
-class PatientList(tk.Frame):
+class PatientList(Frame):
 	def __init__(self, master, **kargs):
 		super().__init__(master)
-		self.listbox1 = tk.Listbox(self, **kargs)
-		scroll = tk.Scrollbar(self, command = self.listbox1.yview)
+		self.listbox1 = Listbox(self, **kargs)
+		scroll = Scrollbar(self, command = self.listbox1.yview)
 		self.listbox1.config(yscrollcommand = scroll.set)
 		scroll.pack(side = tk.RIGHT, fill = tk.Y)
 		self.listbox1.pack(side = tk.LEFT, fill = tk.BOTH, expand = 1)

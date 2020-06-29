@@ -1,27 +1,29 @@
 import tkinter as tk
+from view.widgets import *
 from view.patient_form import PatientForm
 
 
-class SeeImc(tk.Toplevel):
+class SeeImc(Toplevel):
 	def __init__(self, parent, height, weight):
 		super().__init__(parent)
-		self.resizable(0,0)
-		self.__center_window()
+		self.rs = Resources()
+		center_window(self, w = 220, h = 170)
 		self.imc = tk.StringVar()
 		self.body_comp = tk.StringVar()
 		self.set_imc(height, weight)
-		self.label1 = tk.Label(self, text = 'IMC:')
-		self.label2 = tk.Label(self, text = 'Composicion corporal:')
-		self.label3 = tk.Label(self, text = self.imc)
-		self.label4 = tk.Label(self, text = self.body_comp)
-		self.button1 = tk.Button(self, text = 'Volver', command = self.destroy)
+		self.label1 = Label(self, text = 'IMC:', font = self.rs.font1)
+		self.label2 = Label(self, text = 'Composicion corporal:', font = self.rs.font1)
+		self.label3 = Label(self, text = self.imc)
+		self.label4 = Label(self, text = self.body_comp)
+		self.button1 = Button(self, text = ' Volver',
+			image = self.rs.icon5, command = self.destroy)
 
 		opts = {'padx': 20, 'pady': 4}
 		self.label1.pack(side = tk.TOP, **opts)
 		self.label3.pack(side = tk.TOP, **opts)
 		self.label2.pack(side = tk.TOP, **opts)
 		self.label4.pack(side = tk.TOP, **opts)
-		self.button1.pack(side = tk.TOP, **opts)
+		self.button1.pack(side = tk.TOP, ipady = 1, ipadx = 5,**opts)
 
 		self.grab_set()
 		self.wait_window()
@@ -38,13 +40,3 @@ class SeeImc(tk.Toplevel):
 			self.body_comp = 'Peso superior al normal'
 		else:
 			self.body_comp = 'Peso obesidad'
-
-	def __center_window(self):
-		win = self
-		width = 200
-		height = 150
-		height_screen = win.winfo_screenwidth()
-		width_screen = win.winfo_screenheight() 
-		x = int((height_screen / 2) - (width / 2))
-		y = int((width_screen / 2) - (height / 2))
-		win.geometry('{}x{}+{}+{}'.format(width, height, x, y))

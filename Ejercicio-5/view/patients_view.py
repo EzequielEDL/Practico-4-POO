@@ -1,4 +1,5 @@
 import tkinter as tk
+from view.widgets import *
 from view.patient_list import PatientList
 from view.update_patient_form import UpdatePatientForm
 
@@ -6,16 +7,18 @@ from view.update_patient_form import UpdatePatientForm
 class PatientsView(tk.Tk):
 	def __init__(self):
 		super().__init__()
-		self.__center_window()
+		self.rs = Resources()
+		center_window(self, w = 520, h = 330)
+		self.config(bg = self.rs.color_bg)
 		self.title('Lista de Pacientes')
 		self.list = PatientList(self)
 		self.form = UpdatePatientForm(self)
 		self.resizable(0,0)
-		self.button_new = tk.Button(self, text = 'Agregar Paciente')
+		self.button_new = Button(self, text = ' Agregar Paciente', image = self.rs.icon4)
 
 		self.list.pack(side = tk.LEFT, padx = 10, pady = 10)
 		self.form.pack(padx = 10, pady = 10)
-		self.button_new.pack(side = tk.BOTTOM, pady = 5)
+		self.button_new.pack(side = tk.TOP, pady = 5, ipadx = 5)
 
 	def set_controller(self, ctrl):
 		self.button_new.config(command = ctrl.create_patient)
@@ -39,13 +42,3 @@ class PatientsView(tk.Tk):
 
 	def see_patient(self, patient):
 		self.form.show_patient(patient)
-
-	def __center_window(self):
-		win = self
-		width = 450
-		height = 300
-		height_screen = win.winfo_screenwidth()
-		width_screen = win.winfo_screenheight() 
-		x = int((height_screen / 2) - (width / 2))
-		y = int((width_screen / 2) - (height / 2))
-		win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
