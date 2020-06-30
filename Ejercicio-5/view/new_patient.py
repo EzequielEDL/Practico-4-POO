@@ -7,7 +7,7 @@ class NewPatient(Toplevel):
 	def __init__(self, parent):
 		super().__init__(parent)
 		self.rs = Resources()
-		center_window(self, w = 350, h = 280)
+		center_window(self, w = 350, h = 290)
 		self.patient = None
 		self.form = PatientForm(self)
 		self.button_add = Button(self, text = ' Confirmar',
