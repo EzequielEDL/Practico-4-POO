@@ -1,4 +1,4 @@
 COLOR 07
 dir
-main_app.py
+main.py
 cmd /k
