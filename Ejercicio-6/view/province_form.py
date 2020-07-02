@@ -8,15 +8,17 @@ class ProvinceForm(LabelFrame):
 	def __init__(self, master):
 		super().__init__(master)
 
-		self.config(text = 'Provincias', padx = 15, pady = 10)
+		self.config(text = 'Provincias', pady = 10)
 		self.frame = Frame(self)
-		self.entries = list(map(self.add_field, enumerate(self.fields)))
 		self.frame.grid(row = 0, column = 0)
+
+	def mapeo(self):
+		self.entries = list(map(self.create_field, enumerate(self.fields)))
 
 	def create_field(self, field):
 		position, text = field
 		label = Label(self.frame, text = text)
-		entry = Entry(self.frame, width = 25)
+		entry = Entry(self.frame, width = 17)
 		opts = {'padx': 5, 'pady': 5}
 		label.grid(row = position, column = 0, **opts)
 		entry.grid(row = position, column = 1, **opts)
@@ -24,7 +26,7 @@ class ProvinceForm(LabelFrame):
 
 	def show_value(self, value):
 		values = (value.get_name(), value.get_capital(),
-			value.get_quat_hab(), value.get_quat_dep())
+			value.get_quant_hab(), value.get_quant_dep())
 
 		for entry, value in zip(self.entries, values):
 			entry.delete(0, END)
@@ -44,4 +46,4 @@ class ProvinceForm(LabelFrame):
 
 	def clean(self):
 		for entry in self.entries:
-			entry.delete(0, tk.END)
+			entry.delete(0, END)

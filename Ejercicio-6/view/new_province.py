@@ -1,7 +1,7 @@
 from view.widgets import *
 
 
-class NewProvince(TopLevel):
+class NewProvince(Toplevel):
 	def __init__(self, master):
 		super().__init__(master)
 		self.rs = Resources()

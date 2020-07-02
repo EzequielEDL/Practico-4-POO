@@ -17,7 +17,8 @@ class Resources():
 		self.font2 = font.Font(family = 'Helvetica')
 		
 		#	image/icon/variable
-		#self.icon1 = PhotoImage(file = "icon/details.png")
+		self.icon1 = PhotoImage(file = "icon/add.png")
+		self.icon2 = PhotoImage(file = "icon/next.png")
 		
 class Label(Label):
 	def __init__(self, master, **kwargs):
@@ -73,7 +74,7 @@ class Listbox(Listbox):
 			selectforeground = self.rs.color_bg2,
 			width = 20,
 			highlightthickness = 0,
-			height = 15,
+			height = 18,
 			takefocus = 0,
 			relief = SUNKEN
 			)
@@ -116,6 +117,8 @@ class Tk(Tk):
  		self.config(
 			bg = self.rs.color_bg
 			)
+ 		self.resizable(0, 0)
+ 		self.title('Lista de Provincias')
  		self.config(**kargs)
 
 def center_window(self, w, h):
