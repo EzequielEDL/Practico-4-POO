@@ -1,19 +1,23 @@
 from view.widgets import *
+from model.province import Province
+from tkinter import messagebox
+import requests
 
 
 class ProvinceForm(LabelFrame):
-	fields = ('Nombre', 'Capital', 'Cantidad de Habitantes',
-		'Cantidad de departamentos/partidos')
+	__fields = ('Nombre', 'Capital', 'Cantidad de Habitantes',
+		'Cantidad de departamentos/partidos', 'Temperatura',
+		'Sensación térmica', 'Humedad')
 
 	def __init__(self, master):
 		super().__init__(master)
-
-		self.config(text = 'Provincias', pady = 10)
+		self.rs = Resources()
+		self.config(text = 'Provincia', pady = 10)
 		self.frame = Frame(self)
 		self.frame.grid(row = 0, column = 0)
 
-	def mapeo(self):
-		self.entries = list(map(self.create_field, enumerate(self.fields)))
+	def maping(self, fields):
+		self.entries = list(map(self.create_field, enumerate(fields)))
 
 	def create_field(self, field):
 		position, text = field
@@ -25,19 +29,22 @@ class ProvinceForm(LabelFrame):
 		return entry
 
 	def show_value(self, value):
-		values = (value.get_name(), value.get_capital(),
-			value.get_quant_hab(), value.get_quant_dep())
+		temp, feels_like, humidity = self.request_province(value.get_name())
 
-		for entry, value in zip(self.entries, values):
+		self.values = (value.get_name(), value.get_capital(),
+			value.get_quant_hab(), value.get_quant_dep(), 
+			temp, feels_like, humidity)
+
+		for entry, value in zip(self.entries, self.values):
 			entry.delete(0, END)
 			entry.insert(0, value)
 
 	def create_value(self):
-		values = [e.get() for e in self.entries]
+		self.values = [e.get() for e in self.entries]
 		value = None
 		
 		try:
-			value = value(*values)
+			value = Province(*self.values)
 		
 		except ValueError as e:
 			messagebox.showerror('Error de Validacion', str(e), parent = self)
@@ -47,3 +54,17 @@ class ProvinceForm(LabelFrame):
 	def clean(self):
 		for entry in self.entries:
 			entry.delete(0, END)
+
+	def request_province(self, name):
+		url = f'https://api.openweathermap.org/data/2.5/weather?q={name}&units=metric&appid=ec1ca8a3fdeaa0029772d8479aeda4af'
+		request = requests.get(url)
+		province_json = request.json()
+		try:
+			temp = province_json['main']['temp']
+			feels_like = province_json['main']['feels_like']
+			humidity = province_json['main']['humidity']
+
+		except KeyError:
+			temp, feels_like, humidity = 'None', 'None', 'None'
+
+		return temp, feels_like, humidity

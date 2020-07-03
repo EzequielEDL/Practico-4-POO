@@ -1,0 +1,140 @@
+{
+    "__class__": "HandleProvince",
+    "data": [
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Buenos Aires",
+                "capital": "La Plata",
+                "quant_hab": "12.877.203",
+                "quant_dep": "127"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Catamarca",
+                "capital": "San Fernando del Valle de Catamarca",
+                "quant_hab": "332.390",
+                "quant_dep": "16"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Chaco",
+                "capital": "Resistencia",
+                "quant_hab": "984.446",
+                "quant_dep": "26"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Chubut",
+                "capital": "Rawson",
+                "quant_hab": "413.237",
+                "quant_dep": "25"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Cordoba",
+                "capital": "Cordoba",
+                "quant_hab": "930.991",
+                "quant_dep": "24"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Corrientes",
+                "capital": "Corrientes",
+                "quant_hab": "3.066.801",
+                "quant_dep": "15"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Entre Rios",
+                "capital": "Parana",
+                "quant_hab": "1.158.147",
+                "quant_dep": "16"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Formosa",
+                "capital": "Formosa",
+                "quant_hab": "486.559",
+                "quant_dep": "9"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Jujuy",
+                "capital": "San Salvador de Jujuy",
+                "quant_hab": "611.888",
+                "quant_dep": "16"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "La Pampa",
+                "capital": "Santa Rosa",
+                "quant_hab": "299.294",
+                "quant_dep": "22"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "La Rioja",
+                "capital": "La Rioja",
+                "quant_hab": "289.983",
+                "quant_dep": "18"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Mendoza",
+                "capital": "Mendoza",
+                "quant_hab": "1.579.651",
+                "quant_dep": "18"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Misiones",
+                "capital": "Posadas",
+                "quant_hab": "965.522",
+                "quant_dep": "17"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Neuquen",
+                "capital": "Neuquen",
+                "quant_hab": "474.155",
+                "quant_dep": "18"
+            }
+        },
+        {
+            "__class__": "Province",
+            "__attributes__": {
+                "name": "Rio Negro",
+                "capital": "Viedma",
+                "quant_hab": "552.822",
+                "quant_dep": "13"
+            }
+        }
+    ]
+}

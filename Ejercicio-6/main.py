@@ -21,11 +21,10 @@ def main():
 	
 	control = Controller(view, handle)
 	view.set_controller(control)
-	
 	control.start()
 
-	#handle_aux = control.exit_save()
-	#obj_encoder.save(handle_aux, "provinces.json") 
+	handle_aux = control.exit_save()
+	obj_encoder.save(handle_aux, "datos.json") 
 
 if __name__ == '__main__':
 	main()
