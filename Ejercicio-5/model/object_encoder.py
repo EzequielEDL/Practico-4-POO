@@ -20,7 +20,6 @@ class ObjectEncoder(object):
 			return d
 		else :
 			class_name = d['__class__']
-			print(f'-----------------------------------------{class_name}')
 			class_ = eval(class_name)
 
 			if class_name == 'HandlePatient':
