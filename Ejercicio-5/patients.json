@@ -47,8 +47,8 @@
                 "name": "William",
                 "lastname": "Edison",
                 "phone": "(264)9118649",
-                "height": "134",
-                "weight": "134"
+                "height": "180",
+                "weight": "95"
             }
         },
         {
@@ -189,6 +189,16 @@
                 "phone": "(264)4793608",
                 "height": "144",
                 "weight": "122"
+            }
+        },
+        {
+            "__class__": "Patient",
+            "__attributes__": {
+                "name": "Sebastian",
+                "lastname": "Rosales",
+                "phone": "(264)1231231",
+                "height": "180",
+                "weight": "95"
             }
         }
     ]

@@ -29,8 +29,12 @@ class SeeImc(Toplevel):
 		self.wait_window()
 
 	def set_imc(self, height, weight):
-		imc = weight / (((height) / 2) ** 2)
-		self.imc = '{:.1}'.format(imc)
+
+		height = height / 100
+		imc = weight / (height ** 2)
+		print(f'{imc}')
+		self.imc = '{:.4}'.format(imc)
+
 
 		if imc < 18.5:
 			self.body_comp = 'Peso inferior al normal'
