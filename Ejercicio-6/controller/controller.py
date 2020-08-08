@@ -8,14 +8,6 @@ class Controller(object):
 		self.__handle = handle
 		self.__selection = -1
 
-	def delete_province(self):
-		if self.__selection == -1:
-			return
-
-		self.__view.delete_province(self.__selection)
-		self.__handle.del_province(self.__selection)
-		#self.__selection = -1
-
 	def select_province(self, index):
 		self.__selection = index
 		province = self.__handle[index]
